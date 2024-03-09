@@ -1476,72 +1476,11 @@ print(f"eşyalar listesinin herbir elemanının ters çevrilmiş şeklini tek bi
 
 '''
 
-# Soru: users listesi içerisinde bulunan kullanıcılara kurumsal mail adresi oluşturalım.
-
-# örneğin ; burak.yilmaz@bilgeadam.com
-
-# Kullanıcının girdiği passwword is valid mi?
-
-# 1.girilen şifre en az 16 karakter uzunluğunda olmalı
-
-# en az bir büyük bir küçük harf olmalı
-
-# en az bir rakam olmalı
-
-# en az bir tane noktalama işareti olmalı
-
-# her hangi bir ifade tekrar etmemeli
-
-users_list = ['burak yilmaz', 'ertugrul', 'bora eren erdem', 'kerim abdul cabbar okkes']
-
-mail_address = []
-
-birlestirilmis_mail_adresi = []
-
-password_string = ''
-
-password_list = []
-
-password = input('lütfen en az 16 karakter uzunluğunda bir şifre giriniz : ')
-
-büyük_harfler = 'ABCÇDEFGĞHIİJKLMNOÖPRSŞTUÜVYZ'
-
-kücük_harfler = 'abcçdefgğhıijklmnoöprsştuüvyz'
-
-rakamlar = '0123456789'
-
-noktalama_isaretleri = ['.', ',', ';', ':', '...']
 
 
-for i in users_list:
-    
-    mail_address.append(i.split(' '))
 
-print(mail_address)
+           
 
-
-for j in mail_address:
-    
-    birlestirilmis_mail_adresi.append('.'.join(j) + '@' + 'bilgeadam.com')
-
-print(birlestirilmis_mail_adresi)
-
-
-if len(password) >= 16:
-        for x in password:
-           if x in büyük_harfler:
-              password_list.append(x)
-           elif x in kücük_harfler:
-              password_list.append(x)
-           elif x in rakamlar:
-              password_list.append(x)
-           elif x in noktalama_isaretleri:
-              password_list.append(x)
-           else:
-               print('şifre içinde en az bir adet büyük harf, küçük harf, rakam, noktalama işareti olmalı!')
-else:
-    print('şifre en az 16 karakter uzunluğunda olmalıdır.')
-print(password_list)
         
             
        
